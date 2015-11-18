@@ -1,5 +1,6 @@
 # AugmentedDriverWebExample
 Example for using [Augmented Driver](https://github.com/relateiq/AugmentedDriver) for Web  
+Tutorial [HERE](https://github.com/relateiq/AugmentedDriver)  
 
 
 If you want to run the tests from command line (Linux based)  
