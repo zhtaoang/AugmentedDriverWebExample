@@ -34,5 +34,10 @@ com.salesforceiq.augmenteddriver.runners.TestSuiteRunner -suites SMOKE -suitesPa
 or  
 ```
 com.salesforceiq.augmenteddriver.runners.TestMethodRunner -clazz com.salesforceiq.example.ExampleTest -test searchForSalesforceIQInWiki -capabilities capabilities/chrome.yaml -quantity 3 -parallel 3
-```
+```  
+
+Check [our 5 Minute Tutorial](www.google.com) on how to use the tool.  
+
+Also, for more detailed information, the [Wiki](www.google.com) is available
+
 
