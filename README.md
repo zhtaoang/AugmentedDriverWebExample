@@ -1,7 +1,12 @@
 # AugmentedDriver Web Example
 Example for using [Augmented Driver](https://github.com/relateiq/AugmentedDriver) for Web  
-Tutorial [HERE](https://github.com/relateiq/AugmentedDriver)  
 
+***  
+
+Check [our 5 Minute Tutorial](www.google.com) on how to use the tool.  
+
+Also, for more detailed information, the [Wiki](https://github.com/relateiq/AugmentedDriver/wiki/Augmented-Driver) is available  
+***  
 
 If you want to run the tests from command line (Linux based)  
 
@@ -35,9 +40,5 @@ or
 ```
 com.salesforceiq.augmenteddriver.runners.TestMethodRunner -clazz com.salesforceiq.example.ExampleTest -test searchForSalesforceIQInWiki -capabilities capabilities/chrome.yaml -quantity 3 -parallel 3
 ```  
-
-Check [our 5 Minute Tutorial](www.google.com) on how to use the tool.  
-
-Also, for more detailed information, the [Wiki](www.google.com) is available
 
 
