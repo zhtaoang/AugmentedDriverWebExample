@@ -22,6 +22,8 @@ or
 or  
 ```
 ./scripts/runSuiteLocal.sh SMOKE com.salesforceiq.example capabilities/chrome.yaml
-```
+```  
+
+For running in SauceLabs, remember to set _SAUCE_KEY_ and _SAUCE_USER_ in the properties file (augmented.properties)
 
 
