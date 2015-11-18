@@ -1,4 +1,4 @@
-# AugmentedDriverWebExample
+# AugmentedDriver Web Example
 Example for using [Augmented Driver](https://github.com/relateiq/AugmentedDriver) for Web  
 Tutorial [HERE](https://github.com/relateiq/AugmentedDriver)  
 
