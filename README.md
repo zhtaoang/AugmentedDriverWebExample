@@ -5,7 +5,7 @@ Example for using [Augmented Driver](https://github.com/relateiq/AugmentedDriver
 
 Check [our 5 Minute Tutorial](www.google.com) on how to use the tool.  
 
-Also, for more detailed information, the [Wiki](https://github.com/relateiq/AugmentedDriver/wiki/Augmented-Driver) is available  
+Also, for more detailed information, the [Wiki](https://github.com/relateiq/AugmentedDriver/wiki/The-Basics) is available  
 ***  
 
 If you want to run the tests from command line (Linux based)  
