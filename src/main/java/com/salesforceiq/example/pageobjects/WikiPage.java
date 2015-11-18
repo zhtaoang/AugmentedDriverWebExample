@@ -15,6 +15,10 @@ public class WikiPage extends WebPageObject {
         return augmented().findElementVisible(Bys.HEADING).getText();
     }
 
+    public InfoBox infoBox() {
+        return get(InfoBox.class);
+    }
+
     public static class Bys {
         public static final By HEADING = By.id("firstHeading");
     }

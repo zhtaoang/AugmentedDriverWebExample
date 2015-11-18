@@ -45,4 +45,17 @@ public class ExampleTest extends AugmentedWebTestCase {
         Assert.assertEquals("Salesforce.com", wiki.getTitle());
         assertElementContains(WikiPage.Bys.HEADING, "Salesforce.com");
     }
+
+    @Test
+    public void checkInfoBoxHasTheRightInfo() {
+        driver().get("https://www.wikipedia.org/");
+        WikiPage wiki = get(Search.class)
+                .searchAndGo("SalesforceIq");
+
+        String founded = wiki
+                            .infoBox()
+                            .getRow(2)
+                            .getTitle();
+        Assert.assertEquals("Founded", founded);
+    }
 }
