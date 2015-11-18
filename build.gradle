@@ -1,0 +1,29 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.salesforceiq.augmenteddriver:AugmentedDriver:1.0.1'
+    compile 'org.slf4j:slf4j-log4j12:1.7.13'        
+    compile 'junit:junit:4.12'
+}
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    baseName = 'AugmentedDriver'
+    version = '0.1'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+
