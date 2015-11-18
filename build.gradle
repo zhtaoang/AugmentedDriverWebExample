@@ -7,9 +7,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.guava:guava:18.0'
-    compile 'com.salesforceiq.augmenteddriver:AugmentedDriver:1.0.1'
-    compile 'org.slf4j:slf4j-log4j12:1.7.13'        
+    compile 'com.salesforceiq.augmenteddriver:AugmentedDriver:1.0.+'
     compile 'junit:junit:4.12'
 }
 
@@ -25,5 +23,29 @@ jar {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.11'
+}
+
+task (runTest, dependsOn: 'classes', type: JavaExec) {
+    main = "com.salesforceiq.augmenteddriver.runners.TestMethodRunner"
+    classpath = sourceSets.main.runtimeClasspath
+    if (project.hasProperty("clazz")) {
+        if (project.hasProperty("sauce")) {
+            args '-clazz', clazz, '-test', test, '-sauce', '-capabilities', capabilities, '-quantity', quantity, '-parallel', parallelTests
+        } else {
+            args '-clazz', clazz, '-test', test, '-capabilities', capabilities, '-quantity', quantity, '-parallel', parallelTests
+        }
+    }
+}
+
+task (runSuite, dependsOn: 'classes', type: JavaExec) {
+    main = "com.salesforceiq.augmenteddriver.runners.TestSuiteRunner"
+    classpath = sourceSets.main.runtimeClasspath
+    if (project.hasProperty("suites")) {
+        if (project.hasProperty("sauce")) {
+            args '-suitesPackage', suitesPackage, '-suites', suites, '-capabilities', capabilities, '-parallel', parallelTests, '-sauce'
+        } else {
+           args '-suitesPackage', suitesPackage, '-suites', suites, '-capabilities', capabilities, '-parallel', parallelTests
+        }
+    }
 }
 

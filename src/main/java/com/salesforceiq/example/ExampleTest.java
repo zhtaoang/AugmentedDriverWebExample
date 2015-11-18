@@ -14,7 +14,7 @@ public class ExampleTest extends AugmentedWebTestCase {
     public void searchForSalesforceIQInWiki() {
         driver().get("https://www.wikipedia.org/");
         WikiPage wiki = get(Search.class)
-                                        .searchAndGo("SalesforceIq");
+                                    .searchAndGo("SalesforceIq");
         Assert.assertEquals("SalesforceIQ", wiki.getTitle());
         assertElementContains(WikiPage.Bys.HEADING, "SalesforceIQ");
     }
@@ -23,9 +23,9 @@ public class ExampleTest extends AugmentedWebTestCase {
     public void searchForSalesforceInWiki() {
         driver().get("https://www.wikipedia.org/");
         WikiPage wiki = get(Search.class)
-                .searchAndGo("Salesforce.com");
+                                    .searchAndGo("Salesforce.com");
         Assert.assertEquals("Salesforce.com", wiki.getTitle());
         assertElementContains(WikiPage.Bys.HEADING, "Salesforce.com");
+        Assert.fail();
     }
-
 }
