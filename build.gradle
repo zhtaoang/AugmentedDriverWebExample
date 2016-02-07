@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.salesforceiq.augmenteddriver:AugmentedDriver:1.0.+'
+    compile 'com.salesforceiq.augmenteddriver:AugmentedDriver:1.1.+'
     compile 'junit:junit:4.12'
 }
 
