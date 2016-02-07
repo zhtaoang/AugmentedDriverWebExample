@@ -15,5 +15,6 @@ jar/
 .gradle/
 report/
 libs/
+results/*.xml
 node_modules/
 build/
